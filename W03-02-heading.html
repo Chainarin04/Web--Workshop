@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 03 - 02 : Heading</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-0: #0a0a0d;
+            --bg-1: #111116;
+            --bg-2: #161620;
+            --line: #232330;
+            --gold: #d4af7a;
+            --gold-soft: #b89968;
+            --text-0: #f1efe9;
+            --text-1: #9b9aa8;
+            --text-2: #6b6a78;
+            --mono: 'JetBrains Mono', 'Consolas', monospace;
+            --sans: 'Inter', 'Segoe UI', sans-serif;
+
+            --h1: #e8637a;   --h1-bg: rgba(232,99,122,0.1);
+            --h2: #5d9bd1;   --h2-bg: rgba(93,155,209,0.1);
+            --h3: #4fb8a8;   --h3-bg: rgba(79,184,168,0.1);
+            --h4: #c97dd4;   --h4-bg: rgba(201,125,212,0.1);
+            --h5: #d4af7a;   --h5-bg: rgba(212,175,122,0.1);
+            --h6: #9b7fd4;   --h6-bg: rgba(155,127,212,0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            background-color: var(--bg-0);
+            color: var(--text-0);
+            line-height: 1.75;
+            background-image:
+                radial-gradient(circle at 15% 5%, rgba(212,175,122,0.06), transparent 40%),
+                radial-gradient(circle at 90% 0%, rgba(212,175,122,0.04), transparent 35%);
+            overflow-x: hidden;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(14px) saturate(140%);
+            background: rgba(10,10,13,0.72);
+            border-bottom: 1px solid var(--line);
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            color: var(--text-1);
+        }
+
+        header p::before {
+            content: '';
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 10px 2px rgba(212,175,122,0.6);
+            animation: pulse 2.4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%,100% { opacity:1; transform:scale(1); }
+            50%      { opacity:0.5; transform:scale(0.8); }
+        }
+
+        header nav a {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--text-1);
+            border: 1px solid var(--line);
+            padding: 6px 14px;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        header nav a:hover {
+            color: var(--gold);
+            border-color: var(--gold-soft);
+            background: rgba(212,175,122,0.08);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .hero {
+            padding: 88px 0 48px;
+        }
+
+        .eyebrow {
+            font-family: var(--mono);
+            font-size: 12.5px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: rise 0.7s ease forwards 0s;
+        }
+
+        .eyebrow::after {
+            content: '';
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, var(--gold-soft), transparent);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--mono);
+            font-size: 12px;
+            color: var(--text-2);
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: rise 0.7s ease forwards 0.05s;
+        }
+
+        .breadcrumb a { color: var(--text-1); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--gold); }
+        .breadcrumb .sep { color: var(--line); }
+        .breadcrumb .current { color: var(--gold-soft); }
+
+        .text-title {
+            font-family: var(--sans);
+            font-weight: 800;
+            font-size: clamp(34px, 6vw, 52px);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
+            opacity: 0;
+            animation: rise 0.8s ease forwards 0.15s;
+        }
+
+        .text-title .accent {
+            background: linear-gradient(100deg, var(--gold) 10%, #f0d9ad 50%, var(--gold) 90%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--text-1);
+            max-width: 560px;
+            opacity: 0;
+            animation: rise 0.8s ease forwards 0.25s;
+        }
+
+        @keyframes rise {
+            from { opacity:0; transform:translateY(14px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+
+        .card {
+            background: linear-gradient(165deg, var(--bg-1), var(--bg-2));
+            border: 1px solid var(--line);
+            padding: 32px 36px;
+            margin-bottom: 28px;
+            border-radius: 16px;
+            border-top: 3px solid var(--gold);
+            box-shadow: 0 14px 32px -18px rgba(0,0,0,0.7);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .card.in-view { opacity:1; transform:translateY(0); }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -15%;
+            width: 260px; height: 260px;
+            background: radial-gradient(circle, rgba(212,175,122,0.07), transparent 70%);
+            pointer-events: none;
+        }
+
+        .card h2 {
+            font-family: var(--sans);
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.01em;
+            color: var(--text-0);
+            margin-bottom: 14px;
+            position: relative; z-index: 1;
+        }
+
+        .card > p {
+            color: var(--text-1);
+            font-size: 15px;
+            position: relative; z-index: 1;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 14px 0 0;
+            position: relative; z-index: 1;
+        }
+
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--line);
+            color: var(--text-1);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul li:last-child { border-bottom: none; }
+
+        .label {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 12.5px;
+            font-family: var(--mono);
+            letter-spacing: 0.04em;
+            flex-shrink: 0;
+        }
+
+        .h1-label { background: var(--h1-bg); color: var(--h1); border: 1px solid var(--h1); }
+        .h2-label { background: var(--h2-bg); color: var(--h2); border: 1px solid var(--h2); }
+        .h3-label { background: var(--h3-bg); color: var(--h3); border: 1px solid var(--h3); }
+        .h4-label { background: var(--h4-bg); color: var(--h4); border: 1px solid var(--h4); }
+        .h5-label { background: var(--h5-bg); color: var(--h5); border: 1px solid var(--h5); }
+        .h6-label { background: var(--h6-bg); color: var(--h6); border: 1px solid var(--h6); }
+
+        pre {
+            background: linear-gradient(170deg, var(--bg-1), #0d0d11);
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--gold);
+            padding: 18px 20px;
+            overflow-x: auto;
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: var(--mono);
+            color: #d6d4e0;
+            line-height: 1.8;
+            margin: 18px 0;
+            position: relative; z-index: 1;
+            box-shadow: 0 12px 30px -14px rgba(0,0,0,0.6);
+        }
+
+        pre::before {
+            content: '● ● ●';
+            display: block;
+            letter-spacing: 4px;
+            font-size: 9px;
+            color: var(--text-2);
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: linear-gradient(100deg, rgba(212,175,122,0.1), rgba(212,175,122,0.04));
+            border-bottom: 1px solid rgba(212,175,122,0.25);
+            border-radius: 12px 12px 0 0;
+            padding: 16px 22px;
+            margin: -32px -36px 20px -36px;
+            position: relative; z-index: 1;
+        }
+
+        .card-title .num {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--gold);
+            background: rgba(212,175,122,0.12);
+            border: 1px solid var(--gold-soft);
+            border-radius: 8px;
+            padding: 4px 10px;
+            flex-shrink: 0;
+            letter-spacing: 0.04em;
+        }
+
+        .card-title h2 {
+            margin: 0;
+            font-size: 19px;
+            color: var(--text-0);
+            border: none;
+            padding: 0;
+        }
+
+        .card-title h2 .hl1 { color: var(--h1); font-family: var(--mono); }
+        .card-title h2 .hl6 { color: var(--h6); font-family: var(--mono); }
+
+        .note {
+            border-left: 3px solid var(--gold-soft);
+            padding: 10px 0 10px 16px;
+            margin-top: 16px;
+            color: var(--text-1);
+            font-size: 14.5px;
+            position: relative; z-index: 1;
+        }
+
+        .note::before { content: "💡 "; font-size: 15px; }
+        .note b { color: var(--gold); }
+
+        .card-examples h1, .card-examples h2, .card-examples h3,
+        .card-examples h4, .card-examples h5, .card-examples h6 {
+            font-family: var(--sans);
+            font-weight: 700;
+            padding: 8px 14px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            position: relative; z-index: 1;
+            letter-spacing: -0.01em;
+        }
+
+        .card-examples h1 { font-size: 2em;    border: 1px solid rgba(212,175,122,0.8); background: linear-gradient(90deg, rgba(212,175,122,0.35), rgba(212,175,122,0.08)); color: var(--gold); box-shadow: 0 0 20px -8px rgba(212,175,122,0.5); }
+        .card-examples h2 { font-size: 1.5em;  border: 1px solid rgba(212,175,122,0.65); background: linear-gradient(90deg, rgba(212,175,122,0.28), rgba(212,175,122,0.06)); color: #cfa96e; box-shadow: 0 0 20px -8px rgba(212,175,122,0.35); }
+        .card-examples h3 { font-size: 1.17em; border: 1px solid rgba(212,175,122,0.5); background: linear-gradient(90deg, rgba(212,175,122,0.20), rgba(212,175,122,0.05)); color: #ba9560; box-shadow: 0 0 20px -8px rgba(212,175,122,0.25); }
+        .card-examples h4 { font-size: 1em;    border: 1px solid rgba(212,175,122,0.35); background: linear-gradient(90deg, rgba(212,175,122,0.13), rgba(212,175,122,0.03)); color: #a68050; box-shadow: 0 0 20px -8px rgba(212,175,122,0.15); }
+        .card-examples h5 { font-size: 0.83em; border: 1px solid rgba(212,175,122,0.22); background: linear-gradient(90deg, rgba(212,175,122,0.08), rgba(212,175,122,0.02)); color: #8c6c40; box-shadow: 0 0 20px -8px rgba(212,175,122,0.08); }
+        .card-examples h6 { font-size: 0.67em; border: 1px solid rgba(212,175,122,0.12); background: linear-gradient(90deg, rgba(212,175,122,0.04), rgba(212,175,122,0.01)); color: #6e5430; box-shadow: none; }
+
+        .card-examples p { color: var(--text-1); margin-bottom: 12px; position: relative; z-index: 1; }
+
+        /* สไตล์สำหรับกล่อง Tip Box ที่เพิ่มมาใหม่ */
+        .tip-box {
+            background: linear-gradient(135deg, rgba(212,175,122,0.08), rgba(212,175,122,0.02));
+            border: 1px solid rgba(212,175,122,0.25);
+            border-left: 4px solid var(--gold);
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .tip-box.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tip-box-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+            font-family: var(--mono);
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 12px;
+            letter-spacing: 0.02em;
+        }
+
+        .tip-box p {
+            color: var(--text-1);
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .tip-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tip-box b, .tip-box strong {
+            color: var(--text-0);
+            font-weight: 600;
+        }
+
+        .float-back {
+            position: fixed;
+            bottom: 28px; right: 28px;
+            z-index: 60;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--text-0);
+            background: rgba(17,17,22,0.85);
+            backdrop-filter: blur(12px) saturate(140%);
+            border: 1px solid var(--gold-soft);
+            padding: 11px 18px;
+            border-radius: 100px;
+            text-decoration: none;
+            box-shadow: 0 10px 28px -10px rgba(0,0,0,0.7);
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.4s ease, transform 0.4s ease, background 0.25s ease, box-shadow 0.25s ease;
+            pointer-events: none;
+        }
+
+        .float-back.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .float-back:hover {
+            background: rgba(212,175,122,0.12);
+            color: var(--gold);
+            box-shadow: 0 10px 28px -10px rgba(0,0,0,0.7), 0 0 18px 1px rgba(212,175,122,0.35);
+        }
+
+        .float-back .arrow { transition: transform 0.25s ease; }
+        .float-back:hover .arrow { transform: translateX(-3px); }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-0); }
+        ::-webkit-scrollbar-thumb { background: var(--bg-2); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-soft); }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 16px 60px; }
+            .hero { padding: 64px 0 36px; }
+            .card { padding: 24px 20px; }
+            .tip-box { padding: 20px; }
+            .float-back { bottom: 18px; right: 18px; padding: 9px 14px; font-size: 12px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p>เรียนรู้เว็บเบื้องต้น</p>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <a href="index.html" class="float-back" id="floatBack">
+        <span class="arrow">←</span> Home
+    </a>
+
+    <div class="container">
+
+        <div class="hero">
+            <p class="eyebrow">684259042 // WORKSHOP 03-02</p>
+            <p class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span class="current">Heading 03 - 02</span>
+            </p>
+            <h1 class="text-title">Workshop: HTML <span class="accent">Heading</span></h1>
+            <p>ฝึกใช้แท็ก <span style="color:var(--gold);font-family:var(--mono)">&lt;h1&gt;</span> – <span style="color:var(--gold);font-family:var(--mono)">&lt;h6&gt;</span> และการปรับขนาดหัวข้อด้วย CSS</p>
+        </div>
+
+        <div class="card">
+            
+            <div class="card-title">
+                <span class="num">01</span>
+                <h2>ความหมายของ Headings (<span class="hl1">H1</span>–<span class="hl6">H6</span>)</h2>
+            </div>
+            <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+            <ul>
+                <li><span class="label h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+                <li><span class="label h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+                <li><span class="label h3-label">H3</span> – หัวข้อย่อยภายใน H2</li>
+                <li><span class="label h4-label">H4</span> – ย่อยลงไปอีกระดับ</li>
+                <li><span class="label h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+                <li><span class="label h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+            </ul>
+            <div class="note">
+                <b>H1</b> ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร
+            </div>
+        </div>
+
+        <div class="card card-examples">
+            <div class="card-title">
+                <span class="num">02</span>
+                <h2>ตัวอย่างการใช้ <span class="hl1">H1</span>–<span class="hl6">H6</span></h2>
+            </div>
+            <pre>
+&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;h2&gt;HTML Basics&lt;/h2&gt;
+&lt;h3&gt;What is HTML?&lt;/h3&gt;
+&lt;h4&gt;HTML Syntax&lt;/h4&gt;
+&lt;h5&gt;Example Code&lt;/h5&gt;
+&lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+            </pre>
+            <p>เมื่อแสดงผลจะได้ขนาดลดหลั่นแบบนี้:</p>
+            <h1>H1: Welcome to My Website</h1>
+            <h2>H2: HTML Basics</h2>
+            <h3>H3: What is HTML?</h3>
+            <h4>H4: HTML Syntax</h4>
+            <h5>H5: Example Code</h5>
+            <h6>H6: Note about heading size</h6>
+        </div>
+
+        <!-- เพิ่มกล่อง Tip ใหม่ไว้ล่างสุด -->
+        <div class="tip-box">
+            <div class="tip-box-title">
+                <span style="font-size: 18px;">💡</span> Best Practices (ข้อแนะนำเพิ่มเติม)
+            </div>
+            <p><strong>Tip:</strong> ควรใช้แท็ก <span style="color:var(--gold);font-family:var(--mono)">&lt;h1&gt;</span> เพียงแค่ 1 ครั้งต่อ 1 หน้าเพจเท่านั้น — เพราะมันเปรียบเสมือน Main Topic หรือ Title หลักของหน้านั้นๆ</p>
+            <p><strong>Note:</strong> ใช้ HTML headings สำหรับการจัดโครงสร้าง "หัวข้อ" เท่านั้น! Don't use headings to make text <strong>BIG</strong> or <strong>bold</strong> (อย่าใช้ Heading เพียงเพราะอยากให้ตัวหนังสือใหญ่หรือหนาขึ้นเด็ดขาด)</p>
+        </div>
+
+    </div>
+
+    <script>
+        // ปรับแก้โค้ด JS ให้ครอบคลุมคลาส .tip-box ด้วย เพื่อให้เกิดอนิเมชันเวลาเลื่อนจอ
+        const cards = document.querySelectorAll('.card, .tip-box');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+        }, { threshold: 0.12 });
+        cards.forEach(c => observer.observe(c));
+
+        const floatBack = document.getElementById('floatBack');
+        window.addEventListener('scroll', () => {
+            floatBack.classList.toggle('visible', window.scrollY > 120);
+        });
+    </script>
+
+</body>
+</html>
