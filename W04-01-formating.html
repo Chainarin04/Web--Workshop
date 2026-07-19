@@ -1,218 +1,230 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML Formatting</title>
-<link rel="stylesheet" href="css/W04-formating.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Formatting</title>
+    <link rel="stylesheet" href="css/W04-formating.css">
 </head>
+
 <body>
 
-  <header>
-    <div class="brand">
-      <div class="brand-icon">🎓</div>
-      <div>
-        <h2>เรียนรู้เว็บเบื้องต้น</h2>
-        <p>Web Development Basics</p>
-      </div>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="W03-02-heading.html">Heading</a>
-      <a href="W04-01-formating.html">Formatting</a>
-      <a href="#">Links</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-icon">&lt;/&gt;</div>
-    <div class="hero-text">
-      <h1>แบบฝึกปฏิบัติ: HTML Formatting</h1>
-      <p>เรียนรู้การจัดรูปแบบข้อความด้วยแท็ก HTML พร้อมตัวอย่างและการตกแต่งด้วย CSS</p>
-    </div>
-  </section>
-
-  <main class="container">
-    <section class="card-grid">
-
-      <!-- Card 1: ตัวอย่างผลลัพธ์ -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-icon">📄</span> ตัวอย่างผลลัพธ์
+    <header>
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h2>เรียนรู้เว็บเบื้องต้น</h2>
+                <p>Web Development Basics</p>
+            </div>
         </div>
-        <div class="card-body">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="W03-02-heading.html">Heading</a>
+            <a href="W04-01-formating.html">Formatting</a>
+            <a href="#">Links</a>
+        </nav>
+    </header>
 
-          <div class="format-row">
-            <span class="label b-label">B:</span>
-            <span class="format-text bold">ข้อความตัวหนา</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label strong-label">STRONG:</span>
-            <span class="format-text bold">ข้อความสำคัญ</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label i-label">I:</span>
-            <span class="format-text italic">ข้อความตัวเอียง</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label em-label">EM:</span>
-            <span class="format-text italic">ข้อความเน้นเสียง</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label u-label">U:</span>
-            <span class="format-text underline">ข้อความขีดเส้นใต้</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label mark-label">MARK:</span>
-            <span class="format-text mark-text">ข้อความที่ถูกเน้น</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label small-label">SMALL:</span>
-            <span class="format-text small-text">ข้อความขนาดเล็ก</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label del-label">DEL:</span>
-            <span class="format-text del-text">ข้อความที่ถูกลบ</span>
-          </div>
-
-          <div class="format-row">
-            <span class="label sup-label">SUP:</span>
-            <span class="format-text">x<sup>2</sup></span>
-          </div>
-
-          <div class="format-row">
-            <span class="label sub-label">SUB:</span>
-            <span class="format-text">H<sub>2</sub>O</span>
-          </div>
-
+    <section class="hero">
+        <div class="hero-icon">&lt;/&gt;</div>
+        <div class="hero-text">
+            <h1>แบบฝึกปฏิบัติ: HTML Formatting</h1>
+            <p>เรียนรู้การจัดรูปแบบข้อความด้วยแท็ก HTML พร้อมตัวอย่างและการตกแต่งด้วย CSS</p>
         </div>
-      </div>
+    </section>
 
-      <!-- Card 2: ตัวอย่างโค้ด HTML -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-icon">💻</span> ตัวอย่างโค้ด HTML
-        </div>
-        <div class="card-body">
-          <div class="code-box">
-            <button class="copy-btn" type="button" aria-label="คัดลอกโค้ด" onclick="copyCode(this)">
+    <main class="container">
+        <section class="card-grid">
+
+            <!-- Card 1: ตัวอย่างผลลัพธ์ -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">📄</span> ตัวอย่างผลลัพธ์
+                </div>
+                <div class="card-body">
+
+                    <div class="format-row">
+                        <span class="label b-label">B:</span>
+                        <span class="format-text bold">ข้อความตัวหนา</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label strong-label">STRONG:</span>
+                        <span class="format-text bold">ข้อความสำคัญ</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label i-label">I:</span>
+                        <span class="format-text italic">ข้อความตัวเอียง</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label em-label">EM:</span>
+                        <span class="format-text italic">ข้อความเน้นเสียง</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label u-label">U:</span>
+                        <span class="format-text underline">ข้อความขีดเส้นใต้</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label mark-label">MARK:</span>
+                        <span class="format-text mark-text">ข้อความที่ถูกเน้น</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label small-label">SMALL:</span>
+                        <span class="format-text small-text">ข้อความขนาดเล็ก</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label del-label">DEL:</span>
+                        <span class="format-text del-text">ข้อความที่ถูกลบ</span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label sup-label">SUP:</span>
+                        <span class="format-text">x<sup>2</sup></span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label sub-label">SUB:</span>
+                        <span class="format-text">H<sub>2</sub>O</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card 2: ตัวอย่างโค้ด HTML -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">💻</span> ตัวอย่างโค้ด HTML
+                </div>
+                <div class="card-body">
+                    <div class="code-box">
+                        <button class="copy-btn" type="button" aria-label="คัดลอกโค้ด" onclick="copyCode(this)">
               <svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
-            <div class="code-lines">
-              <div class="code-line"><span class="line-num">1</span><span class="code-content"><span class="tag">&lt;b&gt;</span>ข้อความตัวหนา<span class="tag">&lt;/b&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">2</span><span class="code-content"><span class="tag">&lt;strong&gt;</span>ข้อความสำคัญ<span class="tag">&lt;/strong&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">3</span><span class="code-content"><span class="tag">&lt;i&gt;</span>ข้อความตัวเอียง<span class="tag">&lt;/i&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">4</span><span class="code-content"><span class="tag">&lt;em&gt;</span>ข้อความเน้นเสียง<span class="tag">&lt;/em&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">5</span><span class="code-content"><span class="tag">&lt;u&gt;</span>ข้อความขีดเส้นใต้<span class="tag">&lt;/u&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">6</span><span class="code-content"><span class="tag">&lt;mark&gt;</span>ข้อความที่ถูกเน้น<span class="tag">&lt;/mark&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">7</span><span class="code-content"><span class="tag">&lt;small&gt;</span>ข้อความขนาดเล็ก<span class="tag">&lt;/small&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">8</span><span class="code-content"><span class="tag">&lt;del&gt;</span>ข้อความที่ถูกลบ<span class="tag">&lt;/del&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">9</span><span class="code-content">x<span class="tag">&lt;sup&gt;</span>2<span class="tag">&lt;/sup&gt;</span></span></div>
-              <div class="code-line"><span class="line-num">10</span><span class="code-content">H<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span>O</span></div>
+                        <div class="code-lines">
+                            <div class="code-line"><span class="line-num">1</span><span class="code-content"><span class="tag">&lt;b&gt;</span>ข้อความตัวหนา<span class="tag">&lt;/b&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">2</span><span class="code-content"><span class="tag">&lt;strong&gt;</span>ข้อความสำคัญ<span class="tag">&lt;/strong&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">3</span><span class="code-content"><span class="tag">&lt;i&gt;</span>ข้อความตัวเอียง<span class="tag">&lt;/i&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">4</span><span class="code-content"><span class="tag">&lt;em&gt;</span>ข้อความเน้นเสียง<span class="tag">&lt;/em&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">5</span><span class="code-content"><span class="tag">&lt;u&gt;</span>ข้อความขีดเส้นใต้<span class="tag">&lt;/u&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">6</span><span class="code-content"><span class="tag">&lt;mark&gt;</span>ข้อความที่ถูกเน้น<span class="tag">&lt;/mark&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">7</span><span class="code-content"><span class="tag">&lt;small&gt;</span>ข้อความขนาดเล็ก<span class="tag">&lt;/small&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">8</span><span class="code-content"><span class="tag">&lt;del&gt;</span>ข้อความที่ถูกลบ<span class="tag">&lt;/del&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">9</span><span class="code-content">x<span class="tag">&lt;sup&gt;</span>2<span class="tag">&lt;/sup&gt;</span></span>
+                            </div>
+                            <div class="code-line"><span class="line-num">10</span><span class="code-content">H<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span>O</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Card 3: กิจกรรมฝึกปฏิบัติ -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-icon">🎯</span> กิจกรรมฝึกปฏิบัติ
-        </div>
-        <div class="card-body">
-          <ul class="activity-list">
-            <li>
-              <span class="check">✓</span>
-              <span>ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</span>
-            </li>
-            <li>
-              <span class="check">✓</span>
-              <span>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</span>
-            </li>
-            <li>
-              <span class="check">✓</span>
-              <span>ทดลองเปรียบเทียบ <b>&lt;b&gt;</b> กับ <strong>&lt;strong&gt;</strong> และ <i>&lt;i&gt;</i> กับ <em>&lt;em&gt;</em></span>
-            </li>
-            <li>
-              <span class="check">✓</span>
-              <span>ปรับสี ขนาด และพื้นหลังของข้อความด้วย CSS</span>
-            </li>
-            <li>
-              <span class="check">✓</span>
-              <span>บันทึกไฟล์ชื่อ <code class="inline-code">formatting.html</code></span>
-            </li>
-          </ul>
-        </div>
-      </div>
+            <!-- Card 3: กิจกรรมฝึกปฏิบัติ -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">🎯</span> กิจกรรมฝึกปฏิบัติ
+                </div>
+                <div class="card-body">
+                    <ul class="activity-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <span>ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>ทดลองเปรียบเทียบ <b>&lt;b&gt;</b> กับ <strong>&lt;strong&gt;</strong> และ <i>&lt;i&gt;</i> กับ <em>&lt;em&gt;</em></span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>ปรับสี ขนาด และพื้นหลังของข้อความด้วย CSS</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>บันทึกไฟล์ชื่อ <code class="inline-code">formatting.html</code></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-    </section>
+        </section>
 
-    <section class="tip-box">
-      <div class="tip-icon">💡</div>
-      <div class="tip-content">
-        <h2>เกร็ดความรู้</h2>
-        <p>
-          แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารชัดเจนและมีความหมายมากขึ้น เช่น
-          <strong>&lt;strong&gt;</strong> ใช้สำหรับข้อความสำคัญ
-          <em>&lt;em&gt;</em> ใช้เน้นความสำคัญหรืออารมณ์ และ
-          <mark>&lt;mark&gt;</mark> ใช้เน้นข้อความที่ต้องการให้โดดเด่น
-          แท็กเหล่านี้ช่วยเพิ่มความหมายและช่วยจัดระเบียบเนื้อหาให้ผู้ใช้งานเข้าใจง่ายขึ้น
-        </p>
-      </div>
-    </section>
+        <section class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <h2>เกร็ดความรู้</h2>
+                <p>
+                    แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารชัดเจนและมีความหมายมากขึ้น เช่น
+                    <strong>&lt;strong&gt;</strong> ใช้สำหรับข้อความสำคัญ
+                    <em>&lt;em&gt;</em> ใช้เน้นความสำคัญหรืออารมณ์ และ
+                    <mark>&lt;mark&gt;</mark> ใช้เน้นข้อความที่ต้องการให้โดดเด่น แท็กเหล่านี้ช่วยเพิ่มความหมายและช่วยจัดระเบียบเนื้อหาให้ผู้ใช้งานเข้าใจง่ายขึ้น
+                </p>
+            </div>
+        </section>
 
-  </main>
+    </main>
 
-  <script>
-    function copyCode(btn) {
-      const box = btn.closest('.code-box');
-      const lines = Array.from(box.querySelectorAll('.code-content')).map(el => el.innerText);
-      const text = lines.join('\n');
-      navigator.clipboard.writeText(text).then(() => {
-        btn.classList.add('copied');
-        setTimeout(() => btn.classList.remove('copied'), 1600);
-      });
-    }
+    <script>
+        function copyCode(btn) {
+            const box = btn.closest('.code-box');
+            const lines = Array.from(box.querySelectorAll('.code-content')).map(el => el.innerText);
+            const text = lines.join('\n');
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                setTimeout(() => btn.classList.remove('copied'), 1600);
+            });
+        }
 
-    function addRipple(e) {
-      const el = e.currentTarget;
-      const rect = el.getBoundingClientRect();
-      const ripple = document.createElement('span');
-      const size = Math.max(rect.width, rect.height) * 1.6;
-      ripple.style.position = 'absolute';
-      ripple.style.width = ripple.style.height = size + 'px';
-      ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
-      ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
-      ripple.style.borderRadius = '50%';
-      ripple.style.background = 'rgba(255,255,255,0.55)';
-      ripple.style.pointerEvents = 'none';
-      ripple.style.transform = 'scale(0)';
-      ripple.style.opacity = '1';
-      ripple.style.transition = 'transform 0.55s ease, opacity 0.55s ease';
-      if (getComputedStyle(el).position === 'static') {
-        el.style.position = 'relative';
-      }
-      el.style.overflow = 'hidden';
-      el.appendChild(ripple);
-      requestAnimationFrame(() => {
-        ripple.style.transform = 'scale(1)';
-        ripple.style.opacity = '0';
-      });
-      setTimeout(() => ripple.remove(), 600);
-    }
+        function addRipple(e) {
+            const el = e.currentTarget;
+            const rect = el.getBoundingClientRect();
+            const ripple = document.createElement('span');
+            const size = Math.max(rect.width, rect.height) * 1.6;
+            ripple.style.position = 'absolute';
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(255,255,255,0.55)';
+            ripple.style.pointerEvents = 'none';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.opacity = '1';
+            ripple.style.transition = 'transform 0.55s ease, opacity 0.55s ease';
+            if (getComputedStyle(el).position === 'static') {
+                el.style.position = 'relative';
+            }
+            el.style.overflow = 'hidden';
+            el.appendChild(ripple);
+            requestAnimationFrame(() => {
+                ripple.style.transform = 'scale(1)';
+                ripple.style.opacity = '0';
+            });
+            setTimeout(() => ripple.remove(), 600);
+        }
 
-    document.querySelectorAll(
-      'nav a, .label, .inline-code, .activity-list li, .hero-icon, .brand-icon'
-    ).forEach((el) => el.addEventListener('click', addRipple));
-  </script>
+        document.querySelectorAll(
+            'nav a, .label, .inline-code, .activity-list li, .hero-icon, .brand-icon'
+        ).forEach((el) => el.addEventListener('click', addRipple));
+    </script>
 
 </body>
+
 </html>
