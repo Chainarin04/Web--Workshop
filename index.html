@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
+         :root {
             --bg-0: #0a0a0d;
             --bg-1: #111116;
             --bg-2: #161620;
@@ -23,15 +23,15 @@
             --mono: 'JetBrains Mono', 'Consolas', monospace;
             --sans: 'Inter', 'Segoe UI', sans-serif;
         }
-
+        
         * {
             box-sizing: border-box;
         }
-
+        
         html {
             scroll-behavior: smooth;
         }
-
+        
         body {
             font-family: var(--sans);
             margin: 0;
@@ -39,12 +39,10 @@
             color: var(--text-0);
             background-color: var(--bg-0);
             line-height: 1.75;
-            background-image:
-                radial-gradient(circle at 15% 10%, rgba(212, 175, 122, 0.06), transparent 40%),
-                radial-gradient(circle at 85% 0%, rgba(212, 175, 122, 0.04), transparent 35%);
+            background-image: radial-gradient(circle at 15% 10%, rgba(212, 175, 122, 0.06), transparent 40%), radial-gradient(circle at 85% 0%, rgba(212, 175, 122, 0.04), transparent 35%);
             overflow-x: hidden;
         }
-
+        
         .noise-layer {
             position: fixed;
             inset: 0;
@@ -53,7 +51,7 @@
             z-index: 1;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
-
+        
         .wrap {
             position: relative;
             z-index: 2;
@@ -61,7 +59,7 @@
             margin: 0 auto;
             padding: 0 28px 80px;
         }
-
+        
         header {
             position: sticky;
             top: 0;
@@ -70,7 +68,7 @@
             background: rgba(10, 10, 13, 0.72);
             border-bottom: 1px solid var(--line);
         }
-
+        
         header .inner {
             max-width: 880px;
             margin: 0 auto;
@@ -79,7 +77,7 @@
             align-items: center;
             justify-content: space-between;
         }
-
+        
         header p {
             margin: 0;
             display: flex;
@@ -90,7 +88,7 @@
             letter-spacing: 0.04em;
             color: var(--text-1);
         }
-
+        
         header p::before {
             content: '';
             width: 8px;
@@ -100,12 +98,19 @@
             box-shadow: 0 0 10px 2px rgba(212, 175, 122, 0.6);
             animation: pulse 2.4s ease-in-out infinite;
         }
-
+        
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
         }
-
+        
         nav a {
             font-family: var(--mono);
             font-size: 13px;
@@ -115,18 +120,18 @@
             border-radius: 100px;
             transition: all 0.25s ease;
         }
-
+        
         nav a:hover {
             color: var(--gold);
             border-color: var(--gold-soft);
             background: rgba(212, 175, 122, 0.08);
             text-decoration: none;
         }
-
+        
         .hero {
             padding: 96px 0 56px;
         }
-
+        
         .eyebrow {
             font-family: var(--mono);
             font-size: 12.5px;
@@ -140,14 +145,14 @@
             opacity: 0;
             animation: rise 0.7s ease forwards 0.05s;
         }
-
+        
         .eyebrow::after {
             content: '';
             flex: 1;
             height: 1px;
             background: linear-gradient(90deg, var(--gold-soft), transparent);
         }
-
+        
         h1 {
             font-family: var(--sans);
             font-weight: 800;
@@ -159,14 +164,14 @@
             opacity: 0;
             animation: rise 0.8s ease forwards 0.15s;
         }
-
+        
         h1 .accent {
             background: linear-gradient(100deg, var(--gold) 10%, #f0d9ad 50%, var(--gold) 90%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-
+        
         .lede {
             font-size: 18px;
             color: var(--text-1);
@@ -175,12 +180,18 @@
             opacity: 0;
             animation: rise 0.8s ease forwards 0.25s;
         }
-
+        
         @keyframes rise {
-            from { opacity: 0; transform: translateY(14px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
+        
         .toc-card {
             background: linear-gradient(165deg, var(--bg-1), var(--bg-2));
             border: 1px solid var(--line);
@@ -191,7 +202,7 @@
             opacity: 0;
             animation: rise 0.8s ease forwards 0.35s;
         }
-
+        
         .toc-card::before {
             content: '';
             position: absolute;
@@ -202,7 +213,7 @@
             background: radial-gradient(circle, rgba(212, 175, 122, 0.12), transparent 70%);
             pointer-events: none;
         }
-
+        
         .toc-card h2 {
             margin: 0 0 6px;
             font-size: 13px;
@@ -213,7 +224,7 @@
             border: none;
             padding: 0;
         }
-
+        
         .toc-grid {
             list-style: none;
             margin: 18px 0 0;
@@ -223,7 +234,7 @@
             gap: 4px;
             position: relative;
         }
-
+        
         .toc-grid li a {
             display: flex;
             align-items: baseline;
@@ -234,21 +245,21 @@
             font-size: 14.5px;
             transition: background 0.2s ease, padding-left 0.2s ease, color 0.2s ease;
         }
-
+        
         .toc-grid li a .idx {
             font-family: var(--mono);
             font-size: 12px;
             color: var(--gold-soft);
             flex-shrink: 0;
         }
-
+        
         .toc-grid li a:hover {
             background: rgba(212, 175, 122, 0.08);
             padding-left: 18px;
             color: var(--gold);
             text-decoration: none;
         }
-
+        
         .toc-grid li a .has-ws {
             margin-left: auto;
             font-family: var(--mono);
@@ -261,7 +272,7 @@
             border-radius: 100px;
             flex-shrink: 0;
         }
-
+        
         h2 {
             font-family: var(--sans);
             font-weight: 700;
@@ -270,7 +281,7 @@
             color: var(--text-0);
             margin: 0 0 6px;
         }
-
+        
         section {
             padding: 64px 0;
             border-bottom: 1px solid var(--line);
@@ -278,16 +289,16 @@
             transform: translateY(20px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
-
+        
         section.in-view {
             opacity: 1;
             transform: translateY(0);
         }
-
+        
         section:last-of-type {
             border-bottom: none;
         }
-
+        
         .tag {
             font-family: var(--mono);
             font-size: 12px;
@@ -297,18 +308,18 @@
             display: inline-block;
             margin-bottom: 14px;
         }
-
-        section > p {
+        
+        section>p {
             color: var(--text-1);
             font-size: 16px;
             max-width: 620px;
         }
-
-        section > p a {
+        
+        section>p a {
             color: var(--gold);
             border-bottom: 1px dashed var(--gold-soft);
         }
-
+        
         pre {
             background: linear-gradient(170deg, var(--bg-1), #0d0d11);
             border: 1px solid var(--line);
@@ -325,7 +336,7 @@
             position: relative;
             box-shadow: 0 12px 30px -14px rgba(0, 0, 0, 0.6);
         }
-
+        
         pre::before {
             content: '● ● ●';
             display: block;
@@ -334,21 +345,21 @@
             color: var(--text-2);
             margin-bottom: 12px;
         }
-
+        
         a {
             text-decoration: none;
             color: inherit;
         }
-
+        
         a:hover {
             text-decoration: underline;
             color: var(--gold);
         }
-
+        
         .text-center {
             text-align: center;
         }
-
+        
         .top-link {
             display: inline-flex;
             align-items: center;
@@ -363,18 +374,18 @@
             border-radius: 100px;
             transition: all 0.25s ease;
         }
-
+        
         .top-link:hover {
             color: var(--gold);
             border-color: var(--gold-soft);
             text-decoration: none;
             transform: translateY(-2px);
         }
-
+        
         .top-link::before {
             content: '↑';
         }
-
+        
         .workshop-list {
             list-style: none;
             padding: 0;
@@ -382,7 +393,7 @@
             display: grid;
             gap: 10px;
         }
-
+        
         .workshop-list li a {
             display: flex;
             align-items: center;
@@ -395,53 +406,53 @@
             font-size: 15px;
             transition: all 0.25s ease;
         }
-
+        
         .workshop-list li a::after {
             content: '→';
             color: var(--gold-soft);
             transition: transform 0.25s ease;
         }
-
+        
         .workshop-list li a:hover {
             border-color: var(--gold-soft);
             background: rgba(212, 175, 122, 0.06);
             text-decoration: none;
         }
-
+        
         .workshop-list li a:hover::after {
             transform: translateX(4px);
             color: var(--gold);
         }
-
+        
         footer {
             margin-top: 16px;
             padding-top: 32px;
         }
-
+        
         footer p {
             font-family: var(--mono);
             font-size: 12.5px;
             color: var(--text-2);
             letter-spacing: 0.04em;
         }
-
-        ::-webkit-scrollbar {
+        
+         ::-webkit-scrollbar {
             width: 10px;
         }
-
-        ::-webkit-scrollbar-track {
+        
+         ::-webkit-scrollbar-track {
             background: var(--bg-0);
         }
-
-        ::-webkit-scrollbar-thumb {
+        
+         ::-webkit-scrollbar-thumb {
             background: var(--bg-2);
             border-radius: 10px;
         }
-
-        ::-webkit-scrollbar-thumb:hover {
+        
+         ::-webkit-scrollbar-thumb:hover {
             background: var(--gold-soft);
         }
-
+        
         @media (max-width: 600px) {
             .wrap {
                 padding: 0 18px 60px;
@@ -456,17 +467,20 @@
                 padding: 48px 0;
             }
         }
-
+        
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
         }
-
-        a:focus-visible, button:focus-visible {
+        
+        a:focus-visible,
+        button:focus-visible {
             outline: 2px solid var(--gold);
             outline-offset: 3px;
             border-radius: 4px;
@@ -828,8 +842,8 @@
             <ul class="workshop-list">
                 <li><a href="#">workshop 01 : rabbit</a></li>
                 <li><a href="#">workshop 02 : Login</a></li>
-                <li><a href="W03-heading.html">workshop 03-01 : Heading (ของตัวเอง)</a></li>
-                <li><a href="W03-01-heading.html">workshop 03-02 : Heading (จากห้อง)</a></li>
+                <li><a href="W03-heading.html">workshop 03-01 : Heading-01 </a></li>
+                <li><a href="W03-01-heading.html">workshop 03-02 : Heading-02 </a></li>
                 <li><a href="W04-01-formating.html">workshop 04-01 : Formatting</a></li>
             </ul>
             <a href="#top" class="top-link">TOP</a>
@@ -851,7 +865,9 @@
                     entry.target.classList.add('in-view');
                 }
             });
-        }, { threshold: 0.12 });
+        }, {
+            threshold: 0.12
+        });
         sections.forEach(s => observer.observe(s));
     </script>
 </body>
