@@ -1,296 +1,492 @@
 /* ใส่ดอกจัน (*) เพื่อรีเซ็ตค่า margin และ padding ทั้งหมด */
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Sarabun", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(247, 251, 255);
-  color: black;
+    font-family: "Sarabun", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(247, 251, 255);
+    color: black;
 }
 
 .container {
-  /* border: 1px solid #ff4b4b;
+    /* border: 1px solid #ff4b4b;
   padding: 15px;
   margin: 15px; */
 }
 
 .side-header {
-  background: linear-gradient(90deg, #003c9e, #006eff);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+    background: linear-gradient(90deg, #003c9e, #006eff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
 }
 
 .brand-icon {
-  width: 46px;
-  height: 46px;
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  transition:
-    background 0.25s,
-    transform 0.25s;
-  animation: floatSoft 3.4s ease-in-out infinite;
+    width: 46px;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: background 0.25s, transform 0.25s;
+    animation: floatSoft 3.4s ease-in-out infinite;
 }
 
 .brand-text h2 {
-  font-size: 26px;
-  font-weight: 700;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 .brand-text p {
-  font-size: 14px;
-  opacity: 0.8;
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 .nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .nav-list a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 8px;
-  transition: all 0.5s;
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.5s;
 }
 
 .nav-list a:hover {
-  background-color: rgb(243, 245, 245);
+    background-color: rgb(243, 245, 245);
 }
 
 .main-layout {
-  padding: 20px 22px 0px;
-  display: grid;
-  grid-template-columns: 1fr 390px;
+    padding: 20px 22px 0px;
+    display: grid;
+    grid-template-columns: 1fr 390px;
+    gap: 20px;
 }
+
 
 /* ======== Left-content ======== */
+
 .left-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+
 /* hero */
+
 .hero {
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    100deg,
-    rgb(246, 246, 247),
-    rgba(31, 124, 211, 0.226)
-  );
-  border-radius: 12px;
-  padding: 24px 36px;
-  box-shadow: 0 4px 12px rgba(143, 143, 143, 0.582);
-  min-height: 185px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( 100deg, rgb(246, 246, 247), rgba(31, 124, 211, 0.226));
+    border-radius: 12px;
+    padding: 24px 36px;
+    box-shadow: 0 4px 12px rgba(143, 143, 143, 0.582);
+    min-height: 185px;
 }
 
 .hero-text h1 {
-  font-size: 36px;
-  color: rgb(0, 0, 255);
+    font-size: 36px;
+    color: rgb(0, 0, 255);
 }
 
 .hero-text p {
-  font-size: 21px;
-  color: rgba(16, 16, 231, 0.76);
-  font-weight: 600;
+    font-size: 21px;
+    color: rgba(16, 16, 231, 0.76);
+    font-weight: 600;
 }
 
 .hero-photo img {
-  width: 400px;
-  height: 250px;
-  border: 3px solid rgba(12, 12, 223, 0.719);
-  border-radius: 20px;
-  object-fit: cover;
+    width: 400px;
+    height: 250px;
+    border: 3px solid rgba(12, 12, 223, 0.719);
+    border-radius: 20px;
+    object-fit: cover;
 }
 
+
 /* ================ link example ================ */
+
 .card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 24px 36px;
-  box-shadow: 0 4px 12px rgba(143, 143, 143, 0.582);
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px 36px;
+    box-shadow: 0 4px 12px rgba(143, 143, 143, 0.582);
 }
 
 .card-header-title {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  color: blue;
-  margin-bottom: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: blue;
+    margin-bottom: 10px;
 }
 
 .card-body-grid {
-  display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-  gap: 15px;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 15px;
 }
 
+
 /* panel ซ้ายและขวา */
+
 .result-panel,
 .code-panel {
-  border: 1px solid rgb(230, 234, 253);
-  border-radius: 10px;
-  overflow: hidden;
-
-  /* ทำให้กล่องยืดหยุ่นด้วย Flexbox */
-  display: flex;
-  flex-direction: column;
+    border: 1px solid rgb(230, 234, 253);
+    border-radius: 10px;
+    overflow: hidden;
+    /* ทำให้กล่องยืดหยุ่นด้วย Flexbox */
+    display: flex;
+    flex-direction: column;
 }
 
 .result-panel-title {
-  background-color: rgb(230, 234, 253);
-  padding: 6px 15px;
+    background-color: rgb(230, 234, 253);
+    padding: 6px 15px;
 }
 
 .result-panel-body {
-  padding: 6px 15px;
-
-  /* ให้เนื้อหาสีขาวกินพื้นที่ที่เหลือทั้งหมด */
-  flex-grow: 1;
+    padding: 6px 15px;
+    /* ให้เนื้อหาสีขาวกินพื้นที่ที่เหลือทั้งหมด */
+    flex-grow: 1;
 }
 
 .result-panel-body a {
-  display: block;
-  color: rgb(88, 115, 250);
+    display: block;
+    color: rgb(88, 115, 250);
 }
 
 .result-panel-body a:hover {
-  color: #d41c1c;
-  text-decoration: none;
+    color: #d41c1c;
+    text-decoration: none;
 }
 
 .mail-icon {
-  background-color: rgb(88, 115, 250);
-  border-radius: 5px;
+    background-color: rgb(88, 115, 250);
+    border-radius: 5px;
 }
 
 .back-btn {
-  border: 2px solid rgb(88, 115, 250);
-  border-radius: 5px;
-  padding: 2px 15px;
-  margin-top: 10px;
-  text-decoration: none;
-  display: inline-block !important;
+    border: 2px solid rgb(88, 115, 250);
+    border-radius: 5px;
+    padding: 2px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block !important;
 }
 
+
 /* panel ขวา */
+
 .code-panel-body {
-  background-color: black;
-  min-height: 150px;
-  font-family: monospace;
-  font-size: 15px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    background-color: black;
+    min-height: 150px;
+    font-family: monospace;
+    font-size: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .code-list {
-  color: white;
-  padding: 30px 40px;
-  margin: 0;
+    color: white;
+    padding: 30px 40px;
+    margin: 0;
 }
 
 .code-list li {
-  padding: 0px 20px;
+    padding: 0px 20px;
 }
 
 .tag {
-  color: #d41c1c;
+    color: #d41c1c;
 }
+
 .attr {
-  color: #09e941;
+    color: #09e941;
 }
+
 .value {
-  color: yellow;
+    color: yellow;
 }
+
 
 /*================== image example ================ */
-.image-preview-box {
-  display: flex;
-  gap: 10px; /* ลดช่องว่างลงนิดหน่อยเพื่อให้มีพื้นที่มากขึ้น */
-  align-items: flex-end;
 
-  /* เปลี่ยนตรงนี้เป็น nowrap เพื่อบังคับให้อยู่แถวเดียวกัน */
-  flex-wrap: nowrap;
-  padding: 15px;
+.image-preview-box {
+    display: flex;
+    gap: 10px;
+    /* ลดช่องว่างลงนิดหน่อยเพื่อให้มีพื้นที่มากขึ้น */
+    align-items: flex-end;
+    /* เปลี่ยนตรงนี้เป็น nowrap เพื่อบังคับให้อยู่แถวเดียวกัน */
+    flex-wrap: nowrap;
+    padding: 15px;
 }
 
-/* สร้างการ์ดกรอบครอบรูปภาพและข้อความ */
-.image-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid rgb(230, 234, 253);
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
 
-  /* เพิ่มบรรทัดนี้ เพื่อให้กล่องแต่ละใบแบ่งพื้นที่ความกว้างเท่าๆ กัน */
-  flex: 1 1 0;
+/* สร้างการ์ดกรอบครอบรูปภาพและข้อความ */
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid rgb(230, 234, 253);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* เพิ่มบรรทัดนี้ เพื่อให้กล่องแต่ละใบแบ่งพื้นที่ความกว้างเท่าๆ กัน */
+    flex: 1 1 0;
 }
 
 .image-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 255, 0.15);
-  border-color: rgb(180, 195, 255);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 255, 0.15);
+    border-color: rgb(180, 195, 255);
 }
 
 .image-item img {
-  border-radius: 6px;
-  margin-bottom: 12px;
-
-  /* เพิ่ม 2 บรรทัดนี้ เพื่อให้รูปย่อขนาดอัตโนมัติ ไม่ล้นกล่อง */
-  max-width: 100%;
-  height: auto;
-
-  object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    /* เพิ่ม 2 บรรทัดนี้ เพื่อให้รูปย่อขนาดอัตโนมัติ ไม่ล้นกล่อง */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
+
 
 /* ปรับแต่งข้อความคำอธิบาย */
+
 .image-item figcaption {
-  font-size: 13px; /* ลดขนาดฟอนต์ลงนิดหน่อยให้พอดีกับกล่องที่เล็กลง */
-  color: #4a5568;
-  font-weight: 500;
-  text-align: center;
+    font-size: 13px;
+    /* ลดขนาดฟอนต์ลงนิดหน่อยให้พอดีกับกล่องที่เล็กลง */
+    color: #4a5568;
+    font-weight: 500;
+    text-align: center;
 }
 
+
 /* ======== Right-sidebar ======== */
+
 .right-sidebar {
-  border: 1px solid #d41c1c;
-  padding: 15px;
-  margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
+}
+
+
+/* กล่องกลางๆ ของ sidebar ใช้ร่วมกันได้ทุกกล่อง */
+
+.sidebar-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 4px 12px rgba(143, 143, 143, 0.582);
+}
+
+.sidebar-box-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(0, 62, 158);
+    margin-bottom: 12px;
+}
+
+.sidebar-box-title h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* กล่องจุดประสงค์การเรียนรู้ */
+
+.objective-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.objective-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    cursor: pointer;
+}
+
+.objective-list li:hover {
+    background-color: rgb(230, 234, 253);
+    transform: translateX(4px);
+}
+
+.objective-num {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #003c9e, #006eff);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.objective-list p {
+    font-size: 13px;
+    line-height: 1.45;
+    color: #333;
+}
+
+
+/* กล่องแท็กที่ใช้บ่อย */
+
+.tags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-chip {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tag-chip:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.chip-blue {
+    background-color: rgb(224, 231, 255);
+    color: rgb(0, 62, 158);
+}
+
+.chip-teal {
+    background-color: rgb(209, 250, 245);
+    color: rgb(13, 122, 110);
+}
+
+.chip-orange {
+    background-color: rgb(255, 231, 204);
+    color: rgb(180, 95, 6);
+}
+
+.chip-pink {
+    background-color: rgb(255, 224, 235);
+    color: rgb(190, 24, 93);
+}
+
+
+/* กล่องกิจกรรมที่ปฏิบัติ */
+
+.activity-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.activity-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    cursor: pointer;
+}
+
+.activity-list li:hover {
+    background-color: rgb(224, 247, 232);
+    transform: translateX(4px);
+}
+
+.activity-num {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #0f9d58, #34c77b);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.activity-list p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+}
+
+
+/* กล่องสิ่งที่ต้องส่ง */
+
+.submit-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: rgb(255, 247, 224);
+    border: 1px solid rgb(255, 224, 153);
+}
+
+.submit-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.submit-text h3 {
+    font-size: 15px;
+    color: rgb(146, 96, 0);
+    margin-bottom: 4px;
+}
+
+.submit-text p {
+    font-size: 13px;
+    color: rgb(120, 90, 30);
 }
 
 .tip-box {
-  border: 1px solid #034614;
-  padding: 15px;
-  margin: 15px;
+    border: 1px solid #034614;
+    padding: 15px;
+    margin: 15px;
 }
