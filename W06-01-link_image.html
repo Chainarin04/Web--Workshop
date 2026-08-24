@@ -1,234 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>link_image</title>
+
+    <!-- เชื่อมไฟล์ CSS ที่อยู่ในโฟลเดอร์ css/ -->
     <link rel="stylesheet" href="css/W06-01-link_image.css">
 
-    <!-- Google Font -->
+    <!-- Google Font ภาษาไทย Sarabun -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+
     <div class="container">
-        <!-- header -->
+
+        <!-- ======== HEADER ======== -->
         <header class="side-header">
-            <!-- beand -->
             <div class="brand">
                 <div class="brand-icon">🎓</div>
-
                 <div class="brand-text">
                     <h2>เรียนรู้เว็บเบื้องต้น</h2>
-                    <p>Web development Basics</p>
+                    <p>Web Development Basics</p>
                 </div>
             </div>
 
-
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="index.html">🏠Home</a></li>
-                    <li><a href="W03-01-heading.html">📍Heading</a></li>
-                    <li><a href="W04-01-formating.html">🗒️Formating</a></li>
-                    <li><a href="">🔗Link and Imges</a></li>
-                    <li><a href="">📝Prectice</a></li>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="W03-02-heading.html">🗃️ Heading</a></li>
+                    <li><a href="W04-01-formating.html">≡ Formatting</a></li>
+                    <li><a href="W06-01-link_image.html">🔗 Links & Images</a></li>
+                    <li><a href="#">📝 Practice</a></li>
                 </ul>
             </nav>
-
-
         </header>
 
+        <!-- ======== MAIN LAYOUT ======== -->
         <main class="main-layout">
+
+            <!-- ============ LEFT CONTENT ============ -->
             <section class="left-content">
-                <!-- Hero section -->
+
+                <!-- ---- HERO SECTION ---- -->
                 <section class="hero">
                     <div class="hero-text">
                         <h1>แบบฝึกปฏิบัติ: HTML Link และ Image</h1>
-                        <p>เรียนรู้การสร้างลิงก์และการแทรกรูปภาพด้วยแท็ก HTML <br> พร้อมตัวอย่างและการตกแต่งด้วย CSS
+                        
+                        <!-- ข้อความสำหรับจอคอม (ยาว) -->
+                        <p class="desktop-text">เรียนรู้การสร้างลิงก์และการแทรกรูปภาพด้วยแท็ก HTML <br>
+                            พร้อมตัวอย่างและการตกแต่งด้วย CSS
                         </p>
+                        <!-- ข้อความสำหรับจอมือถือ (สั้นกระชับ) -->
+                        <p class="mobile-text">
+                            เรียนรู้แท็ก HTML Link & Image พื้นฐาน<br>และการตกแต่งด้วย CSS
+                        </p>
+
                     </div>
                     <div class="hero-photo">
                         <img src="images/แมวกดไลค์.jpeg" alt="แมวกดไลค์">
                     </div>
                 </section>
 
-
-                <!-- link-Exmple -->
+                <!-- ---- CARD 1 ---- -->
                 <article class="card">
-                    <div class="card-header-title">
-                        <span>⛓️‍💥</span>
-                        <h3>ตัวอย่างลิ้งค์ (link Examle)</h3>
-                    </div>
+                    <div class="card-header-title">🔗 ตัวอย่างลิงก์ (Link Examples)</div>
                     <div class="card-body-grid">
-
-                        <!-- กล่องด้านซ็าย -->
-                        <div class="result-panel">
-                            <div class="result-panel-title">ผลลัพธ์</div>
-                            <div class="result-panel-body">
-
-                                <a href="https://www.npru.ac.th">ไปยังเว็บไซด์มหาวัทยาลัย</a>
-                                <a href="https://www.google.com">เปิดgoogle ในเท็บใหม่</a>
-
-                                <div style="display: flex; gap: 10px;">
-                                    <span class="mail-icon">✉️</span>
-                                    <a href="mailto:teacher@example.com">ส่งเมลให้ผู้สอน</a>
-                                </div>
-
-                                <a href="index.html" class="back-btn">← กลับไปหน้าแรก</a>
-
-                            </div>
+                        <div class="col-result">
+                            <p class="col-title">ผลลัพธ์</p>
+                            <p><a href="https://www.npru.ac.th" target="_blank">ไปสังเว็บไซต์มหาวิทยาลัย</a></p>
+                            <p><a href="https://www.google.com" target="_blank">เปิด Google ในแท็บใหม่ ↗</a></p>
+                            <p><a href="mailto:teacher@example.com">✉ ส่งอีเมลถึงผู้สอน</a></p>
+                            <p><a href="index.html" class="btn-link">← กลับไปหน้าแรก</a></p>
                         </div>
-
-
-                        <!-- กล่องด้านขวา -->
-                        <div class="code-panel">
-                            <div class="result-panel-title">โค้ด HTML</div>
-                            <div class="code-panel-body">
-                                <ol class="code-list">
-                                    <li>
-                                        <span class="tag">&lt;a</span>
-                                        <span class="attr">href</span> =
-                                        <span class="value">"https://www.npru.ac.th"</span>
-                                        <span class="tag">&gt;</span> เว็บไซต์มหาวิทยาลัย
-                                        <span class="tag">&lt;/a&gt;</span>
-                                    </li>
-                                    <li>
-                                        <span class="tag">&lt;a</span>
-                                        <span class="attr">href</span> =
-                                        <span class="value">"https://www.google.com"</span>
-                                        <span class="attr">target</span> =
-                                        <span class="value">"_blank"</span>
-                                        <span class="tag">&gt;</span> เปิด Google ในแท็บใหม่
-                                        <span class="tag">&lt;/a&gt;</span>
-                                    </li>
-                                    <li>
-                                        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"mailto:teacher@example.com"</span><span class="tag">&gt;</span>ส่งอีเมล<span class="tag">&lt;/a&gt;</span>
-                                    </li>
-                                    <li>
-                                        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"index.html"</span><span class="tag">&gt;</span>กลับหน้าแรก<span class="tag">&lt;/a&gt;</span>
-                                    </li>
-                                </ol>
-
-                            </div>
+                        <div class="col-code">
+                            <p class="col-title">โค้ด HTML</p>
+                            <pre class="code-block">
+<span class="line-num">1</span> <span class="tag-color">&lt;a</span> <span class="attr-color">href</span>="https://www.npru.ac.th"<span class="tag-color">&gt;</span>เป็นไซต์มหาวิทยาลัย<span class="tag-color">&lt;/a&gt;</span>
+<span class="line-num">2</span> <span class="tag-color">&lt;a</span> <span class="attr-color">href</span>="https://www.google.com" <span class="attr-color">target</span>="_blank"<span class="tag-color">&gt;</span>
+   เปิด Google<span class="tag-color">&lt;/a&gt;</span>
+<span class="line-num">3</span> <span class="tag-color">&lt;a</span> <span class="attr-color">href</span>="mailto:teacher@example.com"<span class="tag-color">&gt;</span>ส่งอีเมล<span class="tag-color">&lt;/a&gt;</span>
+<span class="line-num">4</span> <span class="tag-color">&lt;a</span> <span class="attr-color">href</span>="index.html"<span class="tag-color">&gt;</span>กลับหน้าแรก<span class="tag-color">&lt;/a&gt;</span></pre>
                         </div>
                     </div>
-
-
                 </article>
 
-
-
-                <!-- image-Exmple -->
+                <!-- ---- CARD 2 ---- -->
                 <article class="card">
-                    <div class="card-header-title">
-                        <span>🖼️</span>
-                        <h3>ตัวอย่างรูปภาพ (Image Examples)</h3>
-                    </div>
+                    <div class="card-header-title">🖼 ตัวอย่างรูปภาพ (Image Examples)</div>
                     <div class="card-body-grid">
-
-                        <div class="result-panel">
-                            <div class="result-panel-title">ผลลัพธ์</div>
-                            <div class="result-panel-body image-preview-box">
-                                <!-- รูปที่ 1 -->
-                                <figure class="image-item">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbzD6YwJWXykhMPIjzG-3H0eMRX-YTMbx0gif-W9H8A&s=10" alt="ภาพมหาวิทยาลัย" width="220">
-                                    <figcaption>📸 โลโก้มหาวิทยาลัย</figcaption>
+                        <div class="col-result">
+                            <p class="col-title">ผลลัพธ์</p>
+                            <div class="img-grid">
+                                <figure class="img-card">
+                                    <a href="https://www.npru.ac.th" target="_blank">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbzD6YwJWXykhMPIjzG-3H0eMRX-YTMbx0gif-W9H8A&s=10" alt="โลโก้มหาวิทยาลัย">
+                                    </a>
+                                    <figcaption>🏛 โลโก้มหาวิทยาลัย</figcaption>
                                 </figure>
-
-                                <!-- รูปที่ 2 -->
-                                <figure class="image-item">
-                                    <img src="https://sc.npru.ac.th/sc_major/assets/images/major_banner/1706669700_7778ac4e41f62ef3b31c.jpg" alt="ภาพนักศึกษา SE" width="220">
+                                <figure class="img-card">
+                                    <a href="https://sc.npru.ac.th" target="_blank">
+                                        <img src="https://sc.npru.ac.th/sc_major/assets/images/major_banner/1706669700_7778ac4e41f62ef3b31c.jpg" alt="ภาพนักศึกษา SE">
+                                    </a>
                                     <figcaption>📚 ภาพนักศึกษา SE</figcaption>
                                 </figure>
-
-                                <!-- รูปที่ 3 -->
-                                <figure class="image-item">
-                                    <img src="https://pws.npru.ac.th/suphitcha/data/images/se%281%29.png" alt="โลโก้วิชา" height="220">
+                                <figure class="img-card">
+                                    <a href="https://pws.npru.ac.th" target="_blank">
+                                        <img src="https://pws.npru.ac.th/suphitcha/data/images/se%281%29.png" alt="โลโก้สาขา SE">
+                                    </a>
                                     <figcaption>✨ โลโก้สาขา SE</figcaption>
                                 </figure>
                             </div>
                         </div>
-
-
-                        <!-- กล่องด้านขวา -->
-                        <div class="code-panel">
-                            <div class="result-panel-title">โค้ด HTML</div>
-                            <div class="code-panel-body">
-                                <ol class="code-list">
-                                    <li>
-                                        <span class="tag">&lt;img</span>
-                                        <span class="attr">src</span> =
-                                        <span class="value">"images/campus.jpg"</span>
-                                        <span class="attr">alt</span> =
-                                        <span class="value">"ภาพมหาวิทยาลัย"</span>
-                                        <span class="attr">width</span> =
-                                        <span class="value">"220"</span>
-                                        <span class="tag">&gt;</span>
-                                    </li>
-                                    <li>
-                                        <span class="tag">&lt;img</span>
-                                        <span class="attr">src</span> =
-                                        <span class="value">"images/student.jpg"</span>
-                                        <span class="attr">alt</span> =
-                                        <span class="value">"นักศึกษากำลังเรียน"</span>
-                                        <span class="attr">width</span> =
-                                        <span class="value">"180"</span>
-                                        <span class="tag">&gt;</span>
-                                    </li>
-                                    <li>
-                                        <span class="tag">&lt;img</span>
-                                        <span class="attr">src</span> =
-                                        <span class="value">"images/logo.png"</span>
-                                        <span class="attr">alt</span> =
-                                        <span class="value">"โลโก้วิชา"</span>
-                                        <span class="attr">height</span> =
-                                        <span class="value">"80"</span>
-                                        <span class="tag">&gt;</span>
-                                    </li>
-                                </ol>
-
-                            </div>
+                        <div class="col-code">
+                            <p class="col-title">โค้ด HTML</p>
+                            <pre class="code-block">
+<span class="line-num">1</span> <span class="tag-color">&lt;img</span> <span class="attr-color">src</span>="images/campus.jpg" <span class="attr-color">alt</span>="ภาพมหาวิทยาลัย"
+   <span class="attr-color">width</span>="220"<span class="tag-color">&gt;</span>
+<span class="line-num">2</span> <span class="tag-color">&lt;img</span> <span class="attr-color">src</span>="images/student.jpg" <span class="attr-color">alt</span>="นักศึกษากำลังเรียน"
+   <span class="attr-color">width</span>="180"<span class="tag-color">&gt;</span>
+<span class="line-num">3</span> <span class="tag-color">&lt;img</span> <span class="attr-color">src</span>="images/logo.png" <span class="attr-color">alt</span>="โลโกวิชา"
+   <span class="attr-color">height</span>="80"<span class="tag-color">&gt;</span></pre>
                         </div>
                     </div>
-
                 </article>
-
 
             </section>
 
-            <section class="right-sidebar">
-
-                <!-- กล่องจุดประสงค์การเรียนรู้ -->
-                <div class="sidebar-box objective-box">
-                    <div class="sidebar-box-title">
-                        <span>🎯</span>
-                        <h3>จุดประสงค์การเรียนรู้</h3>
-                    </div>
-                    <ol class="objective-list">
-                        <li>
-                            <span class="objective-num">1</span>
-                            <p>อธิบายการใช้งานแท็ก &lt;a&gt; เพื่อสร้างลิงก์ไปยังหน้าเว็บหรือแหล่งต่างๆ</p>
-                        </li>
-                        <li>
-                            <span class="objective-num">2</span>
-                            <p>แทรกรูปภาพด้วยแท็ก &lt;img&gt; พร้อมกำหนดคุณสมบัติพื้นฐาน</p>
-                        </li>
-                        <li>
-                            <span class="objective-num">3</span>
-                            <p>ตกแต่งลิงก์และรูปภาพด้วย CSS เพื่อความสวยงามและน่าใช้งาน</p>
-                        </li>
+            <!-- ============ RIGHT SIDEBAR ============ -->
+            <aside class="right-sidebar">
+                <div class="sidebar-box">
+                    <div class="sidebar-box-title">🎯 จุดประสงค์การเรียนรู้</div>
+                    <ol class="sidebar-list">
+                        <li>อธิบายการใช้แท็ก <code>&lt;a&gt;</code> เพื่อสร้างลิงก์ไปที่อื่นหรือเว็บอื่นแหล่งต่าง ๆ</li>
+                        <li>แทรกรูปภาพด้วยแท็ก <code>&lt;img&gt;</code> พร้อมกำหนดขนาดสมบูรณ์ที่ฐาน</li>
+                        <li>ตกแต่งลิงก์และรูปภาพด้วย CSS เพื่อความสวยงามและน่าใช้งาน</li>
                     </ol>
                 </div>
 
-            </section>
+                <div class="sidebar-box">
+                    <div class="sidebar-box-title">🏷 แท็กที่ใช้บ่อย</div>
+                    <div class="tag-badges">
+                        <span class="badge badge-blue">&lt;a&gt;</span>
+                        <span class="badge badge-orange">href</span>
+                        <span class="badge badge-green">target</span>
+                        <span class="badge badge-purple">&lt;img&gt;</span>
+                        <span class="badge badge-red">src</span>
+                        <span class="badge badge-yellow">alt</span>
+                        <span class="badge badge-teal">width</span>
+                        <span class="badge badge-pink">height</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <div class="sidebar-box-title">📋 กิจกรรมฝึกปฏิบัติ</div>
+                    <ol class="sidebar-list">
+                        <li>สร้างลิงก์อย่างน้อย 3 แบบ</li>
+                        <li>แทรกรูปภาพอย่างน้อย 2 รูป</li>
+                        <li>ใส่ alt ให้กับรูปภาพทุกภาพ</li>
+                        <li>ใส่ CSS เปลี่ยนสีลิงก์เมื่อ hover</li>
+                        <li>ตกแต่งรูปภาพด้วย border-radius หรือ box-shadow</li>
+                        <li>บันทึกไฟล์ชื่อ <code>link-image.html</code></li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-box sidebar-box-yellow">
+                    <div class="sidebar-box-title">✈ สิ่งที่ต้องส่ง</div>
+                    <p>ส่งไฟล์ HTML พร้อมไฟล์และรูปภาพ</p>
+                </div> 
+            </aside>
+
         </main>
 
-        <footer class="tip-box">tip</footer>
+        <!-- ======== TIP BOX / FOOTER ======== -->
+        <footer class="tip-box">
+            <div class="tip-icon-circle">i</div>
+            <div class="tip-content">
+                <strong>เกร็ดความรู้</strong>
+                <p>
+                    แท็ก <code>&lt;a&gt;</code> ใช้สำหรับสร้างลิงก์ (Hyperlink) เพื่อเชื่อมโยงไปยังหน้าเว็บ ไฟล์ หรือที่อยู่อีเมลต่าง ๆ
+                    โดยใช้แอตทริบิวต์ <code>href</code> ระบุปลายทางของลิงก์
+                    แท็ก <code>&lt;img&gt;</code> ใช้สำหรับแทรกรูปภาพ โดยใช้แอตทริบิวต์ <code>src</code>
+                    ระบุแหล่งที่อยู่ของไฟล์รูปภาพ และ <code>alt</code> ระบุความอธิบายรูปภาพ
+                    ซึ่งสำคัญด้านการเข้าถึง (Accessibility)
+                    และช่วยแสดงข้อความเมื่อไม่สามารถโหลดรูปได้
+                </p>
+            </div> 
+            <div class="tip-bulb">
+                <span>💡</span>
+                <span>📚</span>
+            </div>
+        </footer>
+
     </div>
 </body>
-
 </html>
