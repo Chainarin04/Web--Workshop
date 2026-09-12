@@ -1,165 +1,230 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  /* สีหลักของเว็บไซต์ */
- --primary-color:rgb(0, 4, 231);
- --primary-dark-color:rgb(0, 17, 255);
- --secondary-color:#219CD9;
-
-
-  /* สีข้อความ */
-  --muted-text-color: rgb(41, 38, 245);
-  --nav-text-color:rgb(0, 0, 0);
-  --light-text-color:rgb(255, 255, 255);
-
-  /* สีพื้น */
-  --header-bg-color:rgb(255, 255, 255);
-  --footer-bg-color:rgb(12, 12, 12);
-  
-
-  /* สีเงา */
-  --header-box-shadow:0 4px 10px rgb(229, 238, 250);
-
+    /* สีหลักของเว็บไซต์ */
+    --primary-color: rgb(0, 4, 231);
+    --primary-dark-color: rgb(0, 17, 255);
+    --secondary-color: #219CD9;
+    /* สีข้อความ */
+    --muted-text-color: rgb(41, 38, 245);
+    --nav-text-color: rgb(0, 0, 0);
+    --light-text-color: rgb(255, 255, 255);
+    /* สีพื้น */
+    --header-bg-color: rgb(255, 255, 255);
+    --footer-bg-color: rgb(12, 12, 12);
+    /* สีเงา */
+    --header-box-shadow: 0 4px 10px rgb(229, 238, 250);
 }
 
-
 html {
-  scroll-behavior: smooth;
-  /* font-size: 32px; */
+    scroll-behavior: smooth;
+    /* font-size: 32px; */
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #F9F9F7;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #F9F9F7;
 }
 
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 
 /* ============== header ================== */
+
 .header {
-  background-color:rgba(255, 255, 255, 0.74);
-  box-shadow:var(--header-box-shadow);
-
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.74);
+    box-shadow: var(--header-box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
 }
-
 
 .header-content {
-  text-align: center;
-  
-
-  padding-block: 1rem;
+    text-align: center;
+    padding-block: 1rem;
 }
-
 
 .header-title {
-  color:var(--primary-color);
-  font-size: clamp(2rem, 5vw , 3rem);
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw, 3rem);
 }
-
 
 .header-subtitle {}
 
 
-
-
-
 /* ============== Navbar ================== */
-nav  {
-  text-align: center;
-  padding-block: 2rem;
 
+nav {
+    text-align: center;
+    padding-block: 2rem;
 }
-nav a{
-  text-decoration: none;
-  padding: 0.65rem 1.2rem;
-  margin: 0.3rem;
-  
-  color: var(--nav-text-color);
-  background-color:var(--light-text-color);
-  border-radius: 60px;
-  box-shadow: 0 4px rgb(153, 203, 245);
 
-  cursor: pointer;
-
-  transition: transform 0.3s, box-shadow 0.2s;
-  display: inline-block;
-  
+nav a {
+    text-decoration: none;
+    padding: 0.65rem 1.2rem;
+    margin: 0.3rem;
+    color: var(--nav-text-color);
+    background-color: var(--light-text-color);
+    border-radius: 60px;
+    box-shadow: 0 4px rgb(153, 203, 245);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.2s;
+    display: inline-block;
 }
 
 nav a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px rgb(216, 211, 211);
+    transform: translateY(-3px);
+    box-shadow: 0 6px rgb(216, 211, 211);
 }
 
-
 nav a.active {
-  background-color:var(--muted-text-color);
-  color: var(--light-text-color);
+    background-color: var(--muted-text-color);
+    color: var(--light-text-color);
 }
 
 
 /* ============== Main ================== */
-.page-title{
-  text-align: center;
-  margin: 1.5rem;
+
+.page-title {
+    text-align: center;
+    margin: 1.5rem;
 }
 
-.pet-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+.pet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
 .pet-card {
-  background-color:var(--light-text-color);
-  box-shadow: var(--header-box-shadow);
-  border-radius: 0.75rem;
-  overflow: hidden;
-
-  transition: transform 0.3s, box-shadow 0.2s;
-  display: inline-block;
+    background-color: var(--light-text-color);
+    box-shadow: var(--header-box-shadow);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.2s;
+    display: inline-block;
 }
 
-.pet-card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 6px rgb(216, 211, 211);
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px rgb(216, 211, 211);
 }
 
 .pet-card img {
-  height: 16.5rem;
-  width: 100%;
-  object-fit: cover;
-  
+    height: 16.5rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 .pet-content {
-  padding: 1.25rem;
+    padding: 1.25rem;
 }
 
-.pet-content h2{
-  color: var(--primary-dark-color);
+.pet-content h2 {
+    color: var(--primary-dark-color);
 }
 
-.breed {color: var(--muted-text-color);}
+.breed {
+    color: var(--muted-text-color);
+}
+
 
 /* ============== footer ================== */
+
 footer {
-  padding-block: 2rem;
-  background-color: var(--footer-bg-color);
-  color: var(--light-text-color);
-  margin-top: 1.5rem;
-  text-align: center;
+    padding-block: 2rem;
+    background-color: var(--footer-bg-color);
+    color: var(--light-text-color);
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+
+/* ============== คำแนะนำในการเลือกสัตว์เลี้ยง ================== */
+
+.tips-section {
+    max-width: 1280px;
+    margin: 2rem auto 0;
+    background-color: var(--light-text-color);
+    border-radius: 0.75rem;
+    box-shadow: var(--header-box-shadow);
+    padding: 2rem 1.5rem;
+}
+
+.tips-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.tip-card {
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: transform 0.3s, box-shadow 0.2s;
+}
+
+.tip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px rgb(216, 211, 211);
+}
+
+.tip-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* สีพื้นหลังแต่ละ card */
+
+.tip-card.blue {
+    background-color: #dce8ff;
+}
+
+.tip-card.blue h3 {
+    color: var(--primary-color);
+}
+
+.tip-card.purple {
+    background-color: #ede8ff;
+}
+
+.tip-card.purple h3 {
+    color: #6a0dad;
+}
+
+.tip-card.green {
+    background-color: #e0f7ec;
+}
+
+.tip-card.green h3 {
+    color: #1a7a45;
+}
+
+.tip-card.orange {
+    background-color: #fff3e0;
+}
+
+.tip-card.orange h3 {
+    color: #e07800;
 }
