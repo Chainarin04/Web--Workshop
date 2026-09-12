@@ -151,7 +151,7 @@ footer {
 
 /* ============== คำแนะนำในการเลือกสัตว์เลี้ยง ================== */
 
-.tips-section {
+.info-section {
     max-width: 1280px;
     margin: 2rem auto 0;
     background-color: var(--light-text-color);
@@ -160,36 +160,36 @@ footer {
     padding: 2rem 1.5rem;
 }
 
-.tips-section h2 {
+.info-title {
     text-align: center;
     color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.tips-grid {
+.info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
 }
 
-.tip-card {
+.info-card {
     border-radius: 0.75rem;
     padding: 1.25rem;
     transition: transform 0.3s, box-shadow 0.2s;
 }
 
-.tip-card:hover {
+.info-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px rgb(216, 211, 211);
 }
 
-.tip-card h3 {
+.info-card h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.tip-card p {
+.info-card p {
     font-size: 0.9rem;
     line-height: 1.6;
 }
@@ -197,34 +197,34 @@ footer {
 
 /* สีพื้นหลังแต่ละ card */
 
-.tip-card.blue {
+.info-card.info-blue {
     background-color: #dce8ff;
 }
 
-.tip-card.blue h3 {
+.info-card.info-blue h3 {
     color: var(--primary-color);
 }
 
-.tip-card.purple {
+.info-card.info-purple {
     background-color: #ede8ff;
 }
 
-.tip-card.purple h3 {
+.info-card.info-purple h3 {
     color: #6a0dad;
 }
 
-.tip-card.green {
+.info-card.info-green {
     background-color: #e0f7ec;
 }
 
-.tip-card.green h3 {
+.info-card.info-green h3 {
     color: #1a7a45;
 }
 
-.tip-card.orange {
+.info-card.info-orange {
     background-color: #fff3e0;
 }
 
-.tip-card.orange h3 {
+.info-card.info-orange h3 {
     color: #e07800;
 }
