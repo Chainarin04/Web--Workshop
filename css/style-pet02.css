@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* สีหลักของเว็บไซต์ */
+    --primary-color: rgb(0, 4, 231);
+    --primary-dark-color: rgb(0, 17, 255);
+    --secondary-color: #219CD9;
+    /* สีข้อความ */
+    --muted-text-color: rgb(41, 38, 245);
+    --nav-text-color: rgb(0, 0, 0);
+    --light-text-color: rgb(255, 255, 255);
+    /* สีพื้น */
+    --header-bg-color: rgb(255, 255, 255);
+    --footer-bg-color: rgb(12, 12, 12);
+
+    /* สีเงา */
+    --header-box-shadow: 0 4px 10px rgb(229, 238, 250);
+    /* สีขอบ */
+    --border--color:rgb(117, 114, 114);
+}
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: 32px; */
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #F9F9F7;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* ============== header ================== */
+
+.header {
+    background-color: rgba(255, 255, 255, 0.74);
+    box-shadow: var(--header-box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.header-title {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.header-subtitle {}
+
+
+/* ============== Navbar ================== */
+
+.catagory-nav {
+    text-align: center;
+    padding-block: 2rem;
+}
+
+
+
+.catagory-nav label {
+    padding: 0.65rem 1.2rem;
+    margin: 0.3rem;
+    color: var(--nav-text-color);
+    background-color: var(--light-text-color);
+    border-radius: 60px;
+    box-shadow: 0 4px rgb(153, 203, 245);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.2s;
+    display: inline-block;
+    user-select: none;
+}
+
+.catagory-nav label:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px rgb(216, 211, 211);
+}
+
+#filter-all:checked ~ .catagory-nav label[for="filter-all"],
+#filter-dog:checked ~ .catagory-nav label[for="filter-dog"],
+#filter-cat:checked ~ .catagory-nav label[for="filter-cat"],
+#filter-bird:checked ~ .catagory-nav label[for="filter-bird"],
+#filter-fish:checked ~ .catagory-nav label[for="filter-fish"],
+#filter-small-pet:checked ~ .catagory-nav label[for="filter-small-pet"]
+ {
+    background-color: var(--muted-text-color);
+    color: var(--light-text-color);
+}
+
+/* ซ่อนปุ่ม radio */
+.filter-radio {
+    /* display: none; จะหายจากเว็บไปเลย */
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path:inset(50%) ;
+}
+
+
+/* ซ่อน แสดง หัวข้อ  หมวดหมู่*/
+
+.catagory-title{
+    display: none;
+}
+
+#filter-all:checked ~ main .title-all,
+#filter-dog:checked ~ main .title-dog,
+#filter-cat:checked ~ main .title-cat,
+#filter-bird:checked ~ main .title-bird,
+#filter-fish:checked ~ main .title-fish,
+#filter-small-pet:checked ~ main .title-small-pet
+ {
+   display: inline;
+}
+
+/* ซ่อนแสดงภาพสัตว์ */
+
+#filter-dog:checked ~ main .pet-card
+{
+   display: none;
+}
+#filter-cat:checked ~ main .pet-card
+{
+   display: none;
+}
+#filter-bird:checked ~ main .pet-card
+{
+   display: none;
+}
+#filter-fish:checked ~ main .pet-card
+{
+   display: none;
+}
+#filter-small-pet:checked ~ main .pet-card
+ {
+   display: none;
+}
+
+#filter-dog:checked ~ main .pet-dog,
+#filter-cat:checked ~ main .pet-cat,
+#filter-bird:checked ~ main .pet-bird,
+#filter-fish:checked ~ main .pet-fish,
+#filter-small-pet:checked ~ main .pet-small
+ {
+  display: block;
+}
+
+
+
+/* ============== Main ================== */
+
+.page-title {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.pet-card {
+    background-color: var(--light-text-color);
+    box-shadow: var(--header-box-shadow);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px rgb(216, 211, 211);
+}
+
+.pet-card img {
+    height: 16.5rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pet-content {
+    padding: 1.25rem;
+}
+
+.pet-content h2 {
+    color: var(--primary-dark-color);
+}
+
+.breed {
+    color: var(--muted-text-color);
+}
+
+
+/* ============== คำแนะนำในการเลือกสัตว์เลี้ยง ================== */
+
+.info-section {
+    max-width: 1280px;
+    margin: 2rem auto 0;
+    background-color: var(--light-text-color);
+    border-radius: 0.75rem;
+    box-shadow: var(--header-box-shadow);
+    padding: 2rem 1.5rem;
+}
+
+.info-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.info-card {
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: transform 0.3s, box-shadow 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px rgb(216, 211, 211);
+}
+
+.info-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* สีพื้นหลังแต่ละ card */
+
+.info-card.info-blue {
+    background-color: #dce8ff;
+}
+
+.info-card.info-blue h3 {
+    color: var(--primary-color);
+}
+
+.info-card.info-purple {
+    background-color: #ede8ff;
+}
+
+.info-card.info-purple h3 {
+    color: #6a0dad;
+}
+
+.info-card.info-green {
+    background-color: #e0f7ec;
+}
+
+.info-card.info-green h3 {
+    color: #1a7a45;
+}
+
+.info-card.info-orange {
+    background-color: #fff3e0;
+}
+
+.info-card.info-orange h3 {
+    color: #e07800;
+}
+
+/* Learning about form การสร้างฟอร์ */
+
+.form-section {
+    max-width: 1280px;
+    margin: 2rem auto 0;
+    background-color: var(--light-text-color);
+    border-radius: 0.75rem;
+    box-shadow: var(--header-box-shadow);
+    padding: 2rem 1.5rem;
+}
+
+.form-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-section p {
+    text-align: center;
+    color: rgb(124, 123, 123);
+    
+}
+
+.form-section fieldset {
+    padding: 1.5rem;
+    border: 1px solivd var(--border--color);
+    border-radius: 0.75rem;
+}
+
+.form-section legend {
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+.radio-option{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;;
+
+    flex-wrap: wrap;
+}
+
+
+.radio-item {
+    
+}
+
+.radio-item input {
+    accent-color: var(--primary-color);
+}
+
+.radio-item label {
+    padding: 0.65rem 1.2rem;
+    margin: 0.3rem;
+    color: var(--nav-text-color);
+    background-color: var(--light-text-color);
+    border-radius: 60px;
+    box-shadow: 0 4px rgb(153, 203, 245);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.2s;
+    display: inline-block;
+}
+.radio-item label:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px rgb(216, 211, 211);
+}
+
+.radio-item input:checked + label{
+    background-color: var(--muted-text-color);
+    color: var(--light-text-color);
+}
+
+/* ============== footer ================== */
+
+footer {
+    padding-block: 2rem;
+    background-color: var(--footer-bg-color);
+    color: var(--light-text-color);
+    margin-top: 1.5rem;
+    text-align: center;
+}
